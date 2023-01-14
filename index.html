@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Tab</title>
+    <style>
+        *{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            box-sizing: border-box;
+            background-color: #3a7fd3;
+            margin: 150px auto;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            grid-row-gap: 25px;
+            width: 80%;
+            background-color: white;
+            margin: auto;
+            padding: 30px 40px 50px 40px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px -2px #302525;
+            
+        }
+        .tab {
+            display: grid;
+            grid-template-columns: 5fr 2fr;
+            grid-column-gap: 10px;
+        }
+        input{
+            padding: 10px 0;
+            font-weight: bold;
+            border: none;
+            border-bottom: 3px solid #878787;
+            font-size: 17px;
+        }
+        input:focus {
+            outline: none;
+            border-bottom: 3px solid #202020;
+        }
+        button{
+            border: none;
+            font-weight: bold;
+            font-size: 17px;
+            background-color: #d8d8d894;
+        }
+        ul{
+            display: flex;
+            grid-column-gap: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            
+        }
+        ul li {
+            opacity: 0.5;
+        }
+        .opcity{
+            opacity: 1;
+        }
+        ul li:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="tab">
+            <input type="number" id="input" placeholder="Enter tab index">
+            <button id="button">Change tab</button>
+        </div>
+        <div id="item">
+            <ul class="item">
+                <li id="pos" >Positive</li>
+                <li id="neg" >Negativ</li>
+                <li id="nat" >Natural</li>
+            </ul>
+        </div>
+        <h2></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
